@@ -1,21 +1,26 @@
-:root{}
-@property --a{
+:root {}
+
+@property --a {
     syntax: '<angle>';
     inherits: false;
     initial-value: 0deg;
 }
-@keyframes anim1{
-    from{
+
+@keyframes anim1 {
+    from {
         --a: 0deg;
     }
-    to{
+
+    to {
         --a: 360deg;
     }
 }
-body{
+
+body {
     background-image: url(https://i.pinimg.com/736x/29/00/b0/2900b05fec646d7f4193b4f14f7e77b5.jpg);
 }
-.titulo{
+
+.titulo {
     font-size: 30px;
     font-weight: bold;
     color: #000;
@@ -28,19 +33,23 @@ body{
     background-color: #f0f0f0;
     border-radius: 5px;
 }
-.border{
-    border:1px solid #000;
-    border-radius:5px;
-    background-color:#f0f0f0;
-    padding:10px;
-margin-inline: 2px;
-margin-block: 2px;
-text-align: center;
+
+.border {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-inline: 2px;
+    margin-block: 2px;
+    text-align: center;
 }
-.contenedorbotones{
+
+.contenedorbotones {
     display: grid;
-    place-items: center;}
-.button1{
+    place-items: center;
+}
+
+.button1 {
     padding-inline: 10px;
     padding-block: 5px;
     border: 0;
@@ -49,15 +58,17 @@ text-align: center;
     border-width: 5px;
     border-style: solid;
 }
-    .button2 {
-        padding-block: 5px;
-        border: 0;
-        border-image-source: linear-gradient(red, blue);
-        border-image-slice: 1 1 1 1 fill;
-        border-width: 5px;
-        border-style: solid;
+
+.button2 {
+    padding-block: 5px;
+    border: 0;
+    border-image-source: linear-gradient(red, blue);
+    border-image-slice: 1 1 1 1 fill;
+    border-width: 5px;
+    border-style: solid;
 }
-.buttonanim{
+
+.buttonanim {
     padding-inline: 10px;
     padding-block: 5px;
     border: 0;
@@ -65,14 +76,41 @@ text-align: center;
     border-image-slice: 1 1 1 1;
     border-width: 5px;
     border-style: solid;
-    border-image-source: conic-gradient(from var(--a),red, blue); 
+    border-image-source: conic-gradient(from var(--a), red, blue);
     animation: anim1 2s linear infinite;
-&:active{
-    transform: translate(1px, 1px);
-    box-shadow: none;
+
+    &:active {
+        transform: translate(1px, 1px);
+        box-shadow: none;
+    }
 }
+
+.imagen {
+    filter: invert() opacity(50%);
 }
-.elem1{
+
+.gradient {
+    width: 600px;
+    height: 200px;
+    background-image:
+        radial-gradient(transparent 20%, black 22% 30%, transparent 32%),
+        linear-gradient(120deg, gold, transparent, gold),
+        linear-gradient(to top, indigo, red, indigo);
+    background-size: 200px 200px, cover, cover, cover;
+}
+
+.curriculum {
+    display: inline-block;
     background-color: white;
-border-radius: 3px;
-padding: 10px;}
+    border: 0;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+a {
+    display: inline-block;
+    background-color: white;
+    border: 0;
+    border-radius: 3px;
+    padding: 10px;
+}
